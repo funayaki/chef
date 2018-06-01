@@ -1,10 +1,12 @@
 {
-    "name": "your-name-here/Chef",
+    "name": "funayaki/chef",
     "description": "Chef plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {
-        "cakephp/cakephp": "^3.4"
+        "cakephp/cakephp": "^3.4",
+        "funayaki/assets": "dev-master",
+        "pgbi/cakephp3-soft-delete": "~1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^6.0"
@@ -19,5 +21,6 @@
             "Chef\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
