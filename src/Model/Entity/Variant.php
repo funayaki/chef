@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $sku
+ * @property stting $name
  * @property float $weight
  * @property float $height
  * @property float $width
