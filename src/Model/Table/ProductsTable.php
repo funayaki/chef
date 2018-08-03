@@ -14,13 +14,9 @@ use SoftDelete\Model\Table\SoftDeleteTrait;
 /**
  * Products Model
  *
- * @property \Chef\Model\Table\TaxCategoriesTable|\Cake\ORM\Association\BelongsTo $TaxCategories
- * @property \Chef\Model\Table\ShippingCategoriesTable|\Cake\ORM\Association\BelongsTo $ShippingCategories
  * @property \Chef\Model\Table\ProductPropertiesTable|\Cake\ORM\Association\HasMany $ProductProperties
  * @property \Chef\Model\Table\ProductOptionTypesTable|\Cake\ORM\Association\HasMany $ProductOptionTypes
  * @property \Chef\Model\Table\ProductPromotionRulesTable|\Cake\ORM\Association\HasMany $ProductPromotionRules
- * @property \Chef\Model\Table\ProductsTaxonsTable|\Cake\ORM\Association\HasMany $ProductsTaxons
- * @property \Chef\Model\Table\VariantPropertyRulesTable|\Cake\ORM\Association\HasMany $VariantPropertyRules
  * @property \Chef\Model\Table\VariantsTable|\Cake\ORM\Association\HasMany $Variants
  *
  * @method \Chef\Model\Entity\Product get($primaryKey, $options = [])
