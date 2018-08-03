@@ -5,6 +5,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use SoftDelete\Model\Table\SoftDeleteTrait;
 
 /**
  * Variants Model
@@ -30,6 +31,9 @@ use Cake\Validation\Validator;
  */
 class VariantsTable extends Table
 {
+    use SoftDeleteTrait;
+
+    protected $softDeleteField = 'deleted_at';
 
     /**
      * Initialize method
