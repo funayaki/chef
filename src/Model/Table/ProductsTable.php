@@ -152,6 +152,11 @@ class ProductsTable extends Table
             ->allowEmpty('meta_keywords');
 
         $validator
+            ->scalar('status')
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
+
+        $validator
             ->dateTime('created_at')
             ->allowEmpty('created_at');
 
