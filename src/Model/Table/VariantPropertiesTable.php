@@ -1,6 +1,9 @@
 <?php
 namespace Chef\Model\Table;
 
+use ArrayObject;
+use Cake\Datasource\EntityInterface;
+use Cake\Event\Event;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -87,5 +90,15 @@ class VariantPropertiesTable extends Table
         $rules->add($rules->existsIn(['variant_id'], 'Variants'));
 
         return $rules;
+    }
+
+    public function beforeSave(Event $event, EntityInterface $entity, ArrayObject $options)
+    {
+        $this->getConnection()->getDriver()->enableAutoQuoting(true);
+    }
+
+    public function afterSave(Event $event, EntityInterface $entity, ArrayObject $options)
+    {
+        $this->getConnection()->getDriver()->enableAutoQuoting(false);
     }
 }
